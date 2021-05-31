@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "pixcelfont";
+    src: url("/static/font/pixcelfont.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+body{
+    font-family: "pixcelfont", sans-serif;
+    font-size:17px;
+}

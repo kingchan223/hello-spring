@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<!--      <<script th:inline="javascript">-->
+<!--        /*<![CDATA[*/-->
+<!--        var query = [[${member}]];-->
+<!--        console.log(message);-->
+<!--        /*]]>*/-->
+<!--      </script>-->
+
+      <h1 th:text="${member.name}"></h1>
+      <h1 th:text="${member.password}"></h1>
+</body>
+</html>
