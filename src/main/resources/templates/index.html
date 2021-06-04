@@ -9,15 +9,38 @@
 <!-- swiper -->
     <link rel="stylesheet" href="/static/css/swiper.css">
     <link rel="stylesheet" href="/static/css/swiper.min.css">
+
     <script src="/static/js/swiper.js"></script>
     <script src="/static/js/swiper.min.js"></script>
     <!--   -->
+    <script>
+        window.addEventListener("load", function(){
+            function getCookie(){
+                var cookies = document.cookie.split(";");
+                for(var i=0; i<cookies.length; i++){
+                    var cookie = cookies[i].trim();
+                    var unit = cookie.split("=");
+                    if(unit[0]=="cookieName")
+                        return unit[1];
+                }
+                return null;
+            }
+
+            var cookiename = getCookie();
+            if(cookiename == null || cookiename == ""){
+                window.open('http://localhost:8080/ad','width=630, height=400, scrollbars=no, resizable=yes, toolbars=no, menubar=no');
+            }
+        });
+
+
+    </script>
 </head>
 <body>
 <header class="row col_12">
-    <div class="col_10" id="main_header"><img id="planet" src="/static/images/planet.png"></div>
+    <div class="col_10" id="main_header"><img id="planet" src="/static/images/planet.png" alt=""></div>
 </header>
 <div class="middle">
+<!--    <button type="button">오늘 하루 광고 띄우지 않음</button>-->
     <!-- <div class="middle_left col_1"></div> -->
     <section class="middle_center col_10">
         <div class="middle_center_upper col_12">
@@ -29,7 +52,7 @@
                                 <li><a href="">NEWS</a>
                                     <ul class="dropdown">
                                         <li><a href="">ALL</a></li>
-                                        <li><a href="">NOTICE</a></li>
+                                        <li><a href="/notice">NOTICE</a></li>
                                         <li><a href="">UPDATE</a></li>
                                         <li><a href="">EVENT</a></li>
                                     </ul>
@@ -42,12 +65,17 @@
                                         <li><a href="">ITEMS</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="">GAME</a></li>
+                                <li><a href="">GAME</a>
+                                    <ul class="dropdown">
+                                        <li><a href="/ranking">GAME RANKING</a></li>
+                                    </ul>
+                                </li>
+
                                 <li><a href="">COMMUNITY</a>
                                     <ul class="dropdown">
                                         <li><a href="">MEDIA</a></li>
                                         <li><a href="">INFORMATION</a></li>
-                                        <li><a href="">UCC</a></li>
+                                        <li><a href="/community">COMMUNITY</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="">DOWNLOAD</a></li>
@@ -81,6 +109,12 @@
                     <button type="button" onclick="location.href='/login'" class="btn_form">LOGIN</button>
                 </div>
             </div>
+        </div>
+        <div class="challenge col_12">
+            <a href=""><span>FAN ART CHALLENGE</span></a>
+        </div>
+        <div class="canvasWrapper col_12">
+            <a href=""><canvas id="canvas"></canvas></a>
         </div>
     </section>
 

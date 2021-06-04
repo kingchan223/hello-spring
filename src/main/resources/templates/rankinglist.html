@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <script th:inline="javascript">
+    window.addEventListener("load", function(){
+      let gameListBody = document.querySelector("#game-list-body");
+
+      /*<![CDATA[*/
+      let name = /*[[ ${parsedElements} ]]*/;
+      gameListBody.innerHTML = name;
+      /*]]*/
+      let imgs = document.querySelectorAll("img");
+
+      for(let i=0; i<imgs.length-1;i++){
+        imgs[i].style.width="130px";
+        imgs[i].style.height="200px";
+      }
+
+      let tds = document.querySelectorAll("td");
+      for(let i=0; i<tds.length;i++){
+        tds[i].align="center";
+      }
+      gameListBody.lastElementChild.style.display="none";
+    });
+
+  </script>
+  <link rel="stylesheet" type="text/css" href="/static/css/ranking.css"/>
+  <link rel="stylesheet" type="text/css" href="/static/css/font.css"/>
+</head>
+<body>
+<h1>👾🔥HOT GAME RANKING🔥👾</h1>
+<div class="container">
+  <div>
+      <table border="1">
+        <thead>
+        <tr>
+          <td></td>
+          <td>game title</td>
+          <td>publisher</td>
+          <td>ranking-UP</td>
+        </tr>
+        </thead>
+        <tbody id="game-list-body"></tbody>
+      </table>
+  </div>
+</div>
+</body>
+</html>

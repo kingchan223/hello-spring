@@ -1,0 +1,21 @@
+body{
+    background-color:black;
+    color:yellow;
+    align-items:center;
+}
+table {
+    width: 70%;
+    border-top: 1px solid blueviolet;
+    border-collapse: collapse;
+    margin:auto;
+    text-align:center;
+}
+th, td {
+    border-bottom: 1px solid blueviolet;
+    padding: 10px;
+}
+h1{
+    margin:auto;
+    text-align:center;
+    margin-bottom:30px;
+}

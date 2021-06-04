@@ -1,0 +1,72 @@
+body{
+    margin:0;
+    background-color:black;
+}
+#mainback{
+    background-image:url("/static/images/popupback.png");
+    background-size:100% 100%;
+    margin:0 auto;
+    background-color:rgb(7, 189, 245);
+    width:600px;
+    height:300px;
+}
+#land{
+    background-color:rgb(1, 151, 9);
+    width:600px;
+    height:30px;
+    margin:0 auto;
+}
+p{
+    text-align:center;
+    color:white;
+    display:inline-block;
+}
+
+.cl{
+    position:relative;
+    background-color:white;
+    width:40px;
+    height:40px;
+    border-radius: 25px;
+}
+#cloud1{
+    top:15px;
+    left:20px;
+}
+#cloud2{
+    top:-20px;
+    left:50px;
+}
+#cloud3{
+    top:-65px;
+    left:80px;
+}
+#cloud4{
+    top:-100px;
+    left:200px;
+}
+#cloud5{
+    top:-140px;
+    left:230px;
+}
+#cloud6{
+    top:-180px;
+    left:260px;
+}
+#cloud7{
+    top:-220px;
+    left:370px;
+}
+#cloud8{
+    top:-260px;
+    left:400px;
+}
+#cloud9{
+    top:-300px;
+    left:430px;
+}
+img{
+    position: absolute;
+    top:-80px;
+    text-align:center;
+}

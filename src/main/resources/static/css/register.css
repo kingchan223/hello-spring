@@ -2,7 +2,7 @@ body, html{
     height: 100%;
     background-repeat: no-repeat;
     background-color: #d3d3d3;
-    background-image: url("../../../../../../../../Desktop/웹프_1차프로젝트/images/poly.jpg");
+    background-image: url("/static/images/poly.jpg");
 
 }
 
